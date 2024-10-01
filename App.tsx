@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { NativeBaseProvider, View } from 'native-base';
+import AdicionarTarefa from "./src/components/AdicionarTarefa";
+import ListaTarefas from "./src/components/ListaTarefas";
 
 export default function App() {
+  const [tarefas, setTarefas] = useState<string[]>([]);
+
+  const adicionarTarefa = (novaTarefa: string) => {
+    setTarefas([...tarefas, novaTarefa]);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider>
+      <View style={{ flex: 1 }}>
+        <AdicionarTarefa onAdicionarTarefa={adicionarTarefa} />
+        <ListaTarefas tarefas={tarefas} />
+      </View>
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
