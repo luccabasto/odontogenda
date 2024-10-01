@@ -1,25 +1,81 @@
-# odontogenda
-<br>
-<br>
-O projeto odontogenda consiste em uma aplicação mobile, desenvolvida em react-native.
-<br>
-O intuito do projeto é compor a pedida do challenge da FIAP, onde devemos criar uma solução tecnológica a OdontoPrev
-<br>
-O desenvolvimento consiste em um projeto de app onde os clientes possam agendar suas consultas e realizar o cancelamento das mesmas com mais facilidade, assim, evitando que
-<br>
-os consultórios não sofram com horários vazios e com faltas inesperadas de pacientes.
-<br>
-De inicio, estou utilizando o JsonServer para armazenar as informações dos usuários cadastrados, assim, posso manipular localmente com mais facilidade as informações antes da finalização do projeto
+OdontoGenda
 <br>
 <br>
 <br>
-Para iniciarmos o projeto, devemos iniciar tanto a aplicação com
+Descrição do Projeto
+OdontoGenda é uma aplicação móvel desenvolvida em React Native. Este projeto foi criado como parte do desafio da FIAP, em colaboração com a OdontoPrev, com o objetivo de proporcionar uma solução tecnológica para agendamento de consultas odontológicas.
 <br>
-npm install - npm start para inicializar-mos o programa
 <br>
-e para iniciarmos o "backend", utilizamos o comando abaixo
+A aplicação permite que os clientes agendem e cancelem suas consultas de forma fácil e rápida, minimizando o impacto de horários vazios e faltas inesperadas nos consultórios.
 <br>
-json-server --watch db.json para iniciar o "backend"
 <br>
-*http://localhost:8081/*
-O frontend inicia na porta: *http://localhost:8081/* e o json server na porta "http://localhost:3030/-------"
+Atualmente, utilizamos o JsonServer para armazenar as informações dos usuários cadastrados, facilitando a manipulação local dos dados durante o desenvolvimento.
+<br>
+<br>
+
+<b>Como Iniciar o Projeto?</b>
+<br>
+Para configurar e executar o projeto localmente, siga os passos abaixo:
+<br>
+<br>
+
+<b>1. Clone o Repositório</b>
+<br>
+<br>
+
+git clone <URL_DO_REPOSITORIO>
+<br>
+cd odontogenda
+<br>
+<br>
+
+<b>2. Instale as Dependências do Frontend</b>
+<br>
+<br>
+
+npm install
+<br>
+<br>
+
+<b>3. Inicie a Aplicação</b>
+
+<br>
+<br>
+
+npm start
+<br><br>
+<b>4. Inicie o Backend com JsonServer</b>
+
+<br>
+<br>
+
+json-server --watch db.json
+
+<br>
+<br>
+
+<b>5. Acesse a Aplicação e o Backend</b>
+
+Frontend: http://localhost:8081
+<br>
+JsonServer: http://localhost:3030
+<br>
+<br>
+<br>
+
+<b>Tecnologias Utilizadas:</b>
+
+<br>
+<br>
+
+React Native
+<br>
+JsonServer
+<br>
+Node.js
+<br>
+<br>
+<br>
+<b>Contribuição</b>
+<br>
+Contribuições são bem-vindas! Se você deseja colaborar, sinta-se à vontade para enviar um pull request ou abrir uma issue.
