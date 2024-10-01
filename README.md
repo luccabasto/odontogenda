@@ -12,62 +12,46 @@ A aplicação permite que os clientes agendem e cancelem suas consultas de forma
 Atualmente, utilizamos o JsonServer para armazenar as informações dos usuários cadastrados, facilitando a manipulação local dos dados durante o desenvolvimento.
 <br>
 <br>
-
 <b>Como Iniciar o Projeto?</b>
 <br>
 Para configurar e executar o projeto localmente, siga os passos abaixo:
 <br>
 <br>
-
 <b>1. Clone o Repositório</b>
 <br>
 <br>
-
-git clone <URL_DO_REPOSITORIO>
+git clone [<URL_DO_REPOSITORIO>](https://github.com/ericklpps/odontogenda)
 <br>
 cd odontogenda
 <br>
 <br>
-
 <b>2. Instale as Dependências do Frontend</b>
 <br>
 <br>
-
 npm install
 <br>
 <br>
-
 <b>3. Inicie a Aplicação</b>
-
 <br>
 <br>
-
 npm start
 <br><br>
 <b>4. Inicie o Backend com JsonServer</b>
-
 <br>
 <br>
-
 json-server --watch db.json
-
 <br>
 <br>
-
 <b>5. Acesse a Aplicação e o Backend</b>
-
 Frontend: http://localhost:8081
 <br>
 JsonServer: http://localhost:3030
 <br>
 <br>
 <br>
-
 <b>Tecnologias Utilizadas:</b>
-
 <br>
 <br>
-
 React Native
 <br>
 JsonServer
