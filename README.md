@@ -1,7 +1,5 @@
 <h1><b>OdontoGenda</b></h1>
 <br>
-<br>
-<br>
 Descrição do Projeto
 OdontoGenda é uma aplicação móvel desenvolvida em React Native. Este projeto foi criado como parte do desafio da FIAP, em colaboração com a OdontoPrev, com o objetivo de proporcionar uma solução tecnológica para agendamento de consultas odontológicas.
 <br>
