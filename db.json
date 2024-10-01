@@ -1,14 +1,35 @@
 {
-    "usuarios": [
+  "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "username": "usuario1",
       "password": "senha1"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "usuario2",
       "password": "senha2"
+    },
+    {
+      "id": "94f4",
+      "username": "usuario1",
+      "password": "senha1",
+      "role": "user"
+    },
+    {
+      "id": "9527",
+      "username": "usuario1",
+      "password": "senha1",
+      "role": "user"
+    },
+    {
+      "id": "1727820166596",
+      "nomeCompleto": "Anderson Alves Moreira",
+      "username": "anderson1",
+      "cpf": "88855566623",
+      "dataNascimento": "2000-08-25",
+      "email": "anderson@email.com",
+      "password": "senha1"
     }
   ]
 }

@@ -1,14 +1,11 @@
-import React from 'react';
+import { ProvedorEstadoGlobal } from "./src/hooks/EstadoGlobal";
+import { NativeBaseProvider } from "native-base";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-// Importa o provedor de estado global
-import { ProvedorEstadoGlobal } from "./src/hooks/EstadoGlobal";
-// Importa a tela de Login
-import LoginScreen from "./src/pages/LoginScreen"; // Altere para o caminho correto
-// Importa o componente ListaTarefas
-import ListaTarefas from "./src/components/ListaTarefas";
-import { NativeBaseProvider } from "native-base";
+import LoginScreen from './src/pages/LoginScreen';
+import CadastroScreen from './src/pages/CadastroScreen';
+import ListaTarefas from './src/components/ListaTarefas';
+import AdicionarTarefa from './src/components/AdicionarTarefa';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +16,13 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator initialRouteName="LoginScreen">
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
-            <Stack.Screen name="TarefasScreen" component={ListaTarefas} />
+            <Stack.Screen name="CadastroScreen" component={CadastroScreen} />
+            <Stack.Screen name="TarefasScreen" component={() => (
+              <>
+                <AdicionarTarefa />
+                <ListaTarefas />
+              </>
+            )} />
           </Stack.Navigator>
         </NavigationContainer>
       </ProvedorEstadoGlobal>
