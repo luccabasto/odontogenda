@@ -1,4 +1,4 @@
-<b>OdontoGenda</b>
+<h1><b>OdontoGenda</b></h1>
 <br>
 <br>
 <br>
