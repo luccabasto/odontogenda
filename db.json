@@ -30,6 +30,16 @@
       "dataNascimento": "2000-08-25",
       "email": "anderson@email.com",
       "password": "senha1"
+    },
+    {
+      "id": "1727911071392",
+      "nomeCompleto": "Erick Lopes",
+      "username": "erickl",
+      "cpf": "45555555555",
+      "dataNascimento": "2003-09-30",
+      "email": "erick@erick.com",
+      "telefone": "(11) 98756-5214",
+      "password": "12345"
     }
   ]
 }
