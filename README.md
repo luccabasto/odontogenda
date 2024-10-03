@@ -62,4 +62,12 @@ Node.js
 <br>
 <b>Contribuição</b>
 <br>
-Contribuições são bem-vindas! Se você deseja colaborar, sinta-se à vontade para enviar um pull request ou abrir uma issue.
+<br>
+<h3>Integrantes</h3>
+<br>
+<br>
+Erick Lopes - 553927
+<br>
+Marco Aurélio Morais Ennes - 553201
+<br>
+Gabriel Sá Bragança - 554064
