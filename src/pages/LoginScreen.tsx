@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
+import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 const LoginScreen: React.FC = () => {
@@ -18,7 +18,7 @@ const LoginScreen: React.FC = () => {
       );
 
       if (usuarioValido) {
-        navigation.navigate('Dentista'); // Navega para a tela de Dentistas
+        navigation.navigate('Local'); 
       } else {
         setError('Credenciais inválidas.');
       }
@@ -28,25 +28,55 @@ const LoginScreen: React.FC = () => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.title}>Login</Text>
       <TextInput 
         placeholder="Nome de Usuário" 
         value={username} 
         onChangeText={setUsername} 
-        style={{ marginBottom: 10 }}
+        style={styles.input}
       />
       <TextInput 
         placeholder="Senha" 
         value={password} 
         onChangeText={setPassword} 
         secureTextEntry 
-        style={{ marginBottom: 10 }}
+        style={styles.input}
       />
       <Button title="Login" onPress={handleLogin} />
-      {error && <Text style={{ color: 'red' }}>{error}</Text>}
+      {error && <Text style={styles.errorText}>{error}</Text>}
+      <br/>
       <Button title="Cadastre-se" onPress={() => navigation.navigate('Cadastro')} />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#f9f9f9',
+  },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  input: {
+    height: 50,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    marginBottom: 15,
+    padding: 10,
+    borderRadius: 5,
+    backgroundColor: '#fff',
+  },
+  errorText: {
+    color: 'red',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+});
 
 export default LoginScreen;

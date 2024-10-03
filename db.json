@@ -40,6 +40,16 @@
       "email": "erick@erick.com",
       "telefone": "(11) 98756-5214",
       "password": "12345"
+    },
+    {
+      "id": "1727912369861",
+      "nomeCompleto": "Leandro Carvalho",
+      "username": "leandrocv",
+      "cpf": "48562215565",
+      "dataNascimento": "1998-10-12",
+      "email": "leandrocv@gmail.com",
+      "telefone": "(11) 95486-2158",
+      "password": "leandro123"
     }
   ]
 }

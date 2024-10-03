@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from '../pages/LoginScreen';
 import CadastroScreen from '../pages/CadastroScreen';
-import DentistaScreen from '../pages/LocalScreen';
+import LocalScreen from '../pages/LocalScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,7 +26,7 @@ const AppNavigator: React.FC = () => {
         {/* Tela de Locais */}
         <Stack.Screen 
           name="Local" 
-          component={DentistaScreen} 
+          component={LocalScreen} 
           options={{ title: 'Local' }} 
         />
       </Stack.Navigator>
