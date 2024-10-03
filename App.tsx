@@ -7,7 +7,7 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <ProvedorEstadoGlobal>
-        <AppNavigator /> 
+        <AppNavigator /> {/* Navegador para gerenciar as rotas */}
       </ProvedorEstadoGlobal>
     </NativeBaseProvider>
   );
