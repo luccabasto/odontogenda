@@ -1,13 +1,15 @@
+// LoginScreen.tsx
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-
+import { useUser } from '../hooks/UserContext'; // Importa o contexto do usuário
 
 const LoginScreen: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const navigation = useNavigation<NavigationProp<any>>();
+  const { setUser } = useUser(); // Pega a função para definir o usuário no contexto
 
   const handleLogin = async () => {
     try {
@@ -19,7 +21,8 @@ const LoginScreen: React.FC = () => {
       );
 
       if (usuarioValido) {
-        navigation.navigate('Local'); 
+        setUser({ id: usuarioValido.id, nomeCompleto: usuarioValido.nomeCompleto }); // Armazena o ID e nome do usuário
+        navigation.navigate('Local'); // Navega para a tela de Local após login
       } else {
         setError('Credenciais inválidas.');
       }
@@ -46,7 +49,6 @@ const LoginScreen: React.FC = () => {
       />
       <Button title="Login" onPress={handleLogin} />
       {error && <Text style={styles.errorText}>{error}</Text>}
-      <br/>
       <Button title="Cadastre-se" onPress={() => navigation.navigate('Cadastro')} />
     </View>
   );
