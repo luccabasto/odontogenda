@@ -60,11 +60,7 @@ Node.js
 <br>
 <br>
 <br>
-<b>Contribuição</b>
-<br>
-<br>
 <h3>Integrantes</h3>
-<br>
 <br>
 Erick Lopes - 553927
 <br>
