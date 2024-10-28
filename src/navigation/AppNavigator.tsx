@@ -4,30 +4,40 @@ import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from '../pages/LoginScreen';
 import CadastroScreen from '../pages/CadastroScreen';
 import LocalScreen from '../pages/LocalScreen';
+import DentistaScreen from '../pages/DentistaScreen';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Login: undefined;
+  Cadastro: undefined;
+  Local: undefined;
+  DentistaScreen: { region: string };
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        {/* Tela de Login */}
-        <Stack.Screen 
+        <Stack.Screen
           name="Login" 
           component={LoginScreen} 
           options={{ title: 'Login' }} 
         />
-        {/* Tela de Cadastro */}
         <Stack.Screen 
           name="Cadastro" 
           component={CadastroScreen} 
           options={{ title: 'Cadastro' }} 
         />
-        {/* Tela de Locais */}
         <Stack.Screen 
           name="Local" 
           component={LocalScreen} 
           options={{ title: 'Local' }} 
+        />
+        <Stack.Screen 
+          name="DentistaScreen" 
+          component={DentistaScreen} 
+          options={{ title: 'Lista de Dentistas' }} 
         />
       </Stack.Navigator>
     </NavigationContainer>

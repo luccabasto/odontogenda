@@ -51,5 +51,57 @@
       "telefone": "(11) 95486-2158",
       "password": "leandro123"
     }
+  ],
+  
+  "dentists": [
+    {
+      "id": 1,
+      "name": "Dra. Luana Lopes",
+      "address": "Rua Fernando Falcão, 817",
+      "region": "Zona Sul",
+      "favorite": false
+    },
+    {
+      "id": 2,
+      "name": "Dr. Gabriel Pereira",
+      "address": "Rua Anhantomirim, 25",
+      "region": "Zona Norte",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "name": "Dr. Hete Caetano",
+      "address": "Av. Lins de Vasconcelos, 1222",
+      "region": "Zona Leste",
+      "favorite": false
+    },
+    {
+      "id": 4,
+      "name": "Dra. Elizabeth Correia",
+      "address": "Av. Lacerda Franco, 120",
+      "region": "Zona Oeste",
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "name": "Dr. Marcos Antônio",
+      "address": "Rua Conde de Matos, 1235",
+      "region": "Centro",
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "name": "Dr. Fábio Alves",
+      "address": "Rua Alves Ribeiro, 123",
+      "region": "Zona Sul",
+      "favorite": false
+    },
+    {
+      "id": 7,
+      "name": "Dra. Camila Fernandes",
+      "address": "Av. Paulista, 1500",
+      "region": "Zona Norte",
+      "favorite": false
+    }
   ]
 }

@@ -1,66 +1,25 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Button } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from '../navigation/AppNavigator'; // Importe o tipo de param list
 
 const LocalScreen: React.FC = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeText}>
-        Seja bem-vindo ao agendamento OdontoPrev
-      </Text>
-      <Text style={styles.instructionsText}>
-        Por favor, selecione abaixo o local desejado para agendar sua consulta!
-      </Text>
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>Zona Leste</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>Zona Norte</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>Zona Oeste</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>Zona Sul</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.text}>Centro</Text>
-      </TouchableOpacity>
+  const navigateToDentists = (selectedRegion: string) => {
+    navigation.navigate('DentistaScreen', { region: selectedRegion });
+  };
+
+  return (
+    <View style={{ padding: 16 }}>
+      <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 8 }}>Selecione uma região:</Text>
+      <Button title="Zona Sul" onPress={() => navigateToDentists('Zona Sul')} />
+      <Button title="Zona Norte" onPress={() => navigateToDentists('Zona Norte')} />
+      <Button title="Zona Leste" onPress={() => navigateToDentists('Zona Leste')} />
+      <Button title="Zona Oeste" onPress={() => navigateToDentists('Zona Oeste')} />
+      <Button title="Centro" onPress={() => navigateToDentists('Centro')} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f8f9fa',
-    padding: 20, // Adicionando um pouco de padding
-  },
-  welcomeText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    textAlign: 'center',
-  },
-  instructionsText: {
-    fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
-  },
-  button: {
-    backgroundColor: '#007bff',
-    padding: 20,
-    margin: 10,
-    borderRadius: 5,
-    width: '100%', // Fazendo os botões ocuparem toda a largura disponível
-    alignItems: 'center',
-  },
-  text: {
-    color: 'white',
-    fontSize: 18,
-  },
-});
 
 export default LocalScreen;
