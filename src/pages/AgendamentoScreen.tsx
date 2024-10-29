@@ -1,4 +1,3 @@
-// AgendamentoScreen.tsx
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { RouteProp, useNavigation, useRoute, NavigationProp } from '@react-navigation/native';

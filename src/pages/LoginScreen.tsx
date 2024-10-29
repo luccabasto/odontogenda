@@ -1,8 +1,7 @@
-// LoginScreen.tsx
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { useUser } from '../hooks/UserContext'; // Importa o contexto do usuário
+import { useUser } from '../hooks/UserContext';
 
 const LoginScreen: React.FC = () => {
   const [username, setUsername] = useState('');
