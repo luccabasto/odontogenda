@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { useUser } from '../hooks/UserContext';
+import { Container, 
+  LoginInput, 
+  LoginErrorText, 
+  TitleScreen, 
+  LoginLogo, 
+  LoginViewer, 
+  SubTitle, 
+  LoginInputViewer, 
+  LoginButton, 
+  RegisterButton,
+  TextButton,
+  TextRegister,
+  HorizontalLine
+} from '../styles';
 
 const LoginScreen: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const navigation = useNavigation<NavigationProp<any>>();
-  const { setUser } = useUser(); // Pega a função para definir o usuário no contexto
+  const { setUser } = useUser();
 
   const handleLogin = async () => {
     try {
@@ -20,8 +33,8 @@ const LoginScreen: React.FC = () => {
       );
 
       if (usuarioValido) {
-        setUser({ id: usuarioValido.id, nomeCompleto: usuarioValido.nomeCompleto }); // Armazena o ID e nome do usuário
-        navigation.navigate('Local'); // Navega para a tela de Local após login
+        setUser({ id: usuarioValido.id, nomeCompleto: usuarioValido.nomeCompleto });
+        navigation.navigate('Local');
       } else {
         setError('Credenciais inválidas.');
       }
@@ -31,54 +44,34 @@ const LoginScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <TextInput 
+    <Container>
+      <LoginViewer>
+        <LoginLogo source={require('./../../assets/homeScreen.png')} />
+        <TitleScreen>OdontoGenda</TitleScreen>
+        <SubTitle>Agendou, confirmou, sorriu!</SubTitle>
+      </LoginViewer>
+      <LoginInputViewer>
+        <LoginInput 
         placeholder="Nome de Usuário" 
         value={username} 
-        onChangeText={setUsername} 
-        style={styles.input}
+        onChangeText={setUsername}
       />
-      <TextInput 
+        <LoginInput 
         placeholder="Senha" 
         value={password} 
         onChangeText={setPassword} 
-        secureTextEntry 
-        style={styles.input}
+        secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
-      {error && <Text style={styles.errorText}>{error}</Text>}
-      <Button title="Cadastre-se" onPress={() => navigation.navigate('Cadastro')} />
-    </View>
+        <LoginButton onPress={handleLogin}>
+          <TextButton>Entrar</TextButton>
+        </LoginButton>{error && <LoginErrorText>{error}</LoginErrorText>}
+        <HorizontalLine />
+        <RegisterButton onPress={() => navigation.navigate('Cadastro')}>
+          <TextRegister>Cadastre-se</TextRegister>
+        </RegisterButton>
+        </LoginInputViewer>
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 20,
-    backgroundColor: '#f9f9f9',
-  },
-  title: {
-    fontSize: 24,
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  input: {
-    height: 50,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    marginBottom: 15,
-    padding: 10,
-    borderRadius: 5,
-    backgroundColor: '#fff',
-  },
-  errorText: {
-    color: 'red',
-    textAlign: 'center',
-    marginBottom: 10,
-  },
-});
 
 export default LoginScreen;

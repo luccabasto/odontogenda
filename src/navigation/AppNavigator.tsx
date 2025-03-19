@@ -6,8 +6,10 @@ import CadastroScreen from '../pages/CadastroScreen';
 import LocalScreen from '../pages/LocalScreen';
 import DentistaScreen from '../pages/DentistaScreen';
 import AgendamentoScreen from '../pages/AgendamentoScreen';
+import HomeScreen from '../pages/HomeScreen';
 
 export type RootStackParamList = {
+  Home: undefined;
   Login: undefined;
   Cadastro: undefined;
   Local: undefined;
@@ -20,7 +22,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
         <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login' }} />
         <Stack.Screen name="Cadastro" component={CadastroScreen} options={{ title: 'Cadastro' }} />
         <Stack.Screen name="Local" component={LocalScreen} options={{ title: 'Local' }} />
