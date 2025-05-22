@@ -1,7 +1,10 @@
 
 # 🦷 OdontGenda
 
-Sistema mobile de agendamento odontológico feito em React Native com Expo, utilizando uma API fake com `json-server`.
+Descrição do Projeto
+OdontoGenda é uma aplicação móvel desenvolvida em React Native. Este projeto foi criado como parte do desafio da FIAP, em colaboração com a OdontoPrev, com o objetivo de proporcionar uma solução tecnológica para agendamento de consultas odontológicas. As funcionalidades das telas vão sendo ajustadas conforme o avanço do projeto.
+
+A aplicação permitirá que os clientes agendem e cancelem suas consultas de forma fácil e rápida, minimizando o impacto de horários vazios e faltas inesperadas nos consultórios.
 
 ## 👨‍💻 Integrantes
 
@@ -18,8 +21,7 @@ Sistema mobile de agendamento odontológico feito em React Native com Expo, util
 - TypeScript
 - React Navigation
 - Context API
-- JSON Server (para simular backend)
-
+- JSON Server
 ---
 
 ## 📦 Instalação do Projeto
