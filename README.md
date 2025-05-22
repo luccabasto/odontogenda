@@ -1,67 +1,125 @@
-<h1><b>OdontoGenda</b></h1>
-<br>
-Descrição do Projeto
-OdontoGenda é uma aplicação móvel desenvolvida em React Native. Este projeto foi criado como parte do desafio da FIAP, em colaboração com a OdontoPrev, com o objetivo de proporcionar uma solução tecnológica para agendamento de consultas odontológicas. As funcionalidades das telas vão sendo ajustadas conforme o avanço do projeto.
-<br>
-<br>
-A aplicação permitirá que os clientes agendem e cancelem suas consultas de forma fácil e rápida, minimizando o impacto de horários vazios e faltas inesperadas nos consultórios.
-<br>
-<br>
-Atualmente, utilizamos o JsonServer para armazenar as informações dos usuários cadastrados, facilitando a manipulação local dos dados durante o desenvolvimento, porém será interado ao backend em java e .NET.
-<br>
-<br>
-<b>Como Iniciar o Projeto?</b>
-<br>
-Para configurar e executar o projeto localmente, siga os passos abaixo:
-<br>
-<br>
-<b>1. Clone o Repositório</b>
-<br>
-<br>
-git clone [<URL_DO_REPOSITORIO>](https://github.com/ericklpps/odontogenda)
-<br>
-cd odontogenda
-<br>
-<br>
-<b>2. Instale as Dependências do Frontend</b>
-<br>
-<br>
+
+# 🦷 OdontGenda
+
+Sistema mobile de agendamento odontológico feito em React Native com Expo, utilizando uma API fake com `json-server`.
+
+## 👨‍💻 Integrantes
+
+- Lucas Basto - **553771**
+- Erick Lopes - **553927**
+- Marcelo Galli - **553654**
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- Context API
+- JSON Server (para simular backend)
+
+---
+
+## 📦 Instalação do Projeto
+
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/odontgenda.git
+cd odontgenda/Agenda
+```
+
+### 2. Instale as dependências
+```bash
 npm install
-<br>
-<br>
-<b>3. Inicie a Aplicação</b>
-<br>
-<br>
-npm start
-<br><br>
-<b>4. Inicie o Backend com JsonServer</b>
-<br>
-<br>
-json-server --watch db.json
-<br>
-<br>
-<b>5. Acesse a Aplicação e o Backend</b>
-<br>
-<br>
-Frontend: http://localhost:8081
-<br>
-JsonServer: http://localhost:3030
-<br>
-<br>
-<br>
-<b>Tecnologias Utilizadas:</b>
-<br>
-<br>
-React Native
-<br>
-JsonServer
-<br>
-Node.js
-<br>
-<br>
-<br>
-<h3>Integrantes</h3>
-<br>
-Erick Lopes - 553927
-<br>
-Gabriel Sá Bragança - 554064
+```
+
+### 3. Inicie o servidor fake
+```bash
+npx json-server --watch db.json --port 3000
+```
+> Certifique-se de que o `json-server` esteja instalado globalmente:
+> ```bash
+> npm install -g json-server
+> ```
+
+### 4. Inicie o app
+```bash
+npx expo start
+```
+
+---
+
+## 📱 Funcionalidades
+
+- Login de usuários 👤
+- Visualização de agendamentos 📅
+- Cadastro de pacientes 📝
+- Navegação entre telas com React Navigation
+
+---
+
+## 🌐 Back-end com JSON Server
+
+### Arquivo `db.json` de exemplo:
+```json
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "usuario1",
+      "password": "senha1"
+    }
+  ]
+}
+```
+
+A aplicação se conecta via `fetch` para `http://localhost:3000/usuarios`. Para APKs reais, hospede o `db.json` em um servidor como [Render](https://render.com) ou [Replit](https://replit.com).
+
+---
+
+## 🧪 Teste Rápido (Exemplo)
+
+1. Execute `json-server`
+2. Abra o app
+3. Use:
+   - **Usuário:** usuario1
+   - **Senha:** senha1
+
+---
+
+## 🛠 Scripts úteis
+
+```bash
+npm run start         # Inicia o Expo
+npm run android       # Build para Android
+npm run ios           # Build para iOS
+npm run server        # Inicia o JSON Server
+```
+
+Para adicionar:
+```json
+"scripts": {
+  "server": "json-server --watch db.json --port 3000"
+}
+```
+
+---
+
+## 📦 Build com EAS
+
+```bash
+eas build:configure
+eas build -p android --profile preview
+```
+
+Acesse `eas build:list` para ver links de APK gerados.
+
+---
+
+## 🧠 Observações
+
+- O `json-server` é apenas para desenvolvimento.
+
+---
